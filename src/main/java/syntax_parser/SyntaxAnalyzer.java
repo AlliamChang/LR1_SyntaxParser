@@ -51,9 +51,11 @@ public class SyntaxAnalyzer {
      *   ...   ...
      * e.g. S: "if" S "else" S
      *      |  "if" S
-     * @param path 文件地址
      */
-    public void getInput(String path){
+    public void getInput(){
+        System.out.print("Please enter the rule file: ");
+        Scanner scanner = new Scanner(System.in);
+        String path = scanner.nextLine();
         File input = new File(path);
         try {
             BufferedReader reader = new BufferedReader(new FileReader(input));

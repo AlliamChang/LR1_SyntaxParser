@@ -8,8 +8,8 @@ public class Main {
 
     public static void main(String[] args){
         SyntaxAnalyzer analyzer = SyntaxAnalyzer.getAnalyzer();
-        analyzer.getInput("test");
         try {
+            analyzer.getInput();
             analyzer.compile();
             analyzer.analyze();
         } catch (GrammarException e) {
