@@ -4,16 +4,16 @@
 
 目录
 
-1. [实验目的](#1.实验目的)
-2. [内容描述](#2.内容描述)
-3. [思路方法](#3.思路方法)
-4. [假设](#4.假设)
-5. [相关FA描述](#5.相关FA描述)
-6. [重要数据结构](#6.重要数据结构)
-7. [核心算法](#7.核心算法) 
-8. [运行截图](#8.运行截图)
-9. [问题与解决](#9.问题与解决)
-10. [感受与总结](#10.感受与总结)
+1. [实验目的](# 1.实验目的)
+2. [内容描述](# 2.内容描述)
+3. [思路方法](# 3.思路方法)
+4. [假设](# 4.假设)
+5. [相关FA描述](# 5.相关FA描述)
+6. [重要数据结构](# 6.重要数据结构)
+7. [核心算法](# 7.核心算法) 
+8. [运行截图](# 8.运行截图)
+9. [问题与解决](# 9.问题与解决)
+10. [感受与总结](# 10.感受与总结)
 
 ## 1.实验目的
 
@@ -61,19 +61,19 @@ e.g. if abc else ab c
 
 ## 5.相关FA描述
 
-[DFA](src/main/java/entity/DFA)--通过LR1生成的DFA，其中不包含重复的项集
+[DFA](src/main/java/entity/DFA.java)--通过LR1生成的DFA，其中不包含重复的项集
 
 ## 6.重要数据结构
 
 除了项集结构(DFA)，还有
-* [ItemSet](src/main/java/entity/ItemSet)--构造分析表过程中产生的项集结构
-* [Item](src/main/java/entity/Item)--项集中的项，包含预测集合
-* [Production](src/main/java/entity/Production)--从规则文件抽离出来的产生式
-* [PPT](src/main/java/entity/PPT)--生成的预测分析表
+* [ItemSet](src/main/java/entity/ItemSet.java)--构造分析表过程中产生的项集结构
+* [Item](src/main/java/entity/Item.java)--项集中的项，包含预测集合
+* [Production](src/main/java/entity/Production.java)--从规则文件抽离出来的产生式
+* [PPT](src/main/java/entity/PPT.java)--生成的预测分析表
 
 ## 7.核心算法
 
-构造PPT的算法在[REToLRDFA.java](src/main/java/syntax_parser/REToLRDFA)中，包括
+构造PPT的算法在[REToLRDFA.java](src/main/java/syntax_parser/REToLRDFA.java)中，包括
 * closure()--对项集进行闭包操作
 * goto()--计算项集所有的去向
 * first()--first算法
